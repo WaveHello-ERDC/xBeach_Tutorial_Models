@@ -1,1 +1,1 @@
-call "C:\ERDC\xBeach_Models\XBeach_1.24.6057_Halloween_win64_netcdf\xbeach.exe"
+call "..\..\XBeach_1.24.6057_Halloween_win64_netcdf\xbeach.exe"

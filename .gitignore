@@ -127,7 +127,6 @@ dmypy.json
 cython_debug/
 
 # Executable files
-*.exe
 *.dll
 *.so
 *.dylib

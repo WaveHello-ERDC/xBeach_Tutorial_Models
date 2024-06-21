@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% XBeach parameter settings input file                                     %%%
+%%%                                                                          %%%
+%%% date:     19-Dec-2022 17:10:55                                           %%%
+%%% function: xb_write_params                                                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Flow numerics parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Friction parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bedfriction   = manning
+bedfriccoef  = 0
+nonhq3d      = 0
+
+%%% General %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Flipped this off
+nonhspectrum+ = 0
+
+swrunup       = 1
+vegetation    = 0
+wavemodel     = nonh
+
+%%% Grid parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+depfile       = bed.dep
+posdwn        = 0
+nx            = 16000
+ny            = 0
+alfa          = 0
+vardx         = 1
+xfile         = x.grd
+xori          = 0
+yori          = 0
+thetamin      = -90
+thetamax      = 90
+dtheta        = 180
+thetanaut     = 1
+
+%%% Initial conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+zs0           = 1
+
+%%% Model time %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+tstop         = 40
+CFL           = 0.75
+
+%%% Physical processes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+sedtrans      = 0
+morphology    = 0
+nonh          = 1
+
+%%%% Turn on short wave forcing on nlsw equations and boundary conditions (1)
+lwave         = 0
+
+%% Flow boundary conditions
+front          = nonh_1d
+back           = abs_1d
+left           = neumann
+right          = neumann
+ARC            = 1
+%%%% Switch for order of wave steering,first order wave steering (short wave energy only), 
+%%%%    second oder wave steering (bound long wave corresponding to short wave forcing is added)
+order          = 1
+
+
+%%% Tide boundary conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+zs0file       = 0
+tideloc       = 0
+
+%%% Wave boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Changed this to ts_nonh
+wbctype             = ts_nonh
+bcfile              = boun_U.bcf
+lateralwave         = neumann
+
+%%% Wave breaking parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+gamma         = 1.00000
+
+%%% Wave-spectrum boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commented this out
+%commented_bcfile        = jonswap.txt
+
+%%% Output variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+rugdepth      = 0.010000
+tintm         = 0.1
+tintp         = 0.1
+tintg         = 0.1
+tstart        = 0
+
+nglobalvar    = 3
+zs
+zb
+H

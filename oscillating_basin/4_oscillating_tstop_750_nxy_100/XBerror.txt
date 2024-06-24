@@ -1,7 +1,0 @@
-  Quit XBeach since computational time implodes/explodes
-  Please check output at the end of the simulation
-  V-velocities are too high in cell (81,74)(M,N)
-   dtref:  0.656298590397653
-   par%dt:  7.955004617871149E-004
-  An extra output timestep is created to inquire the last timestep
-      before an error occured

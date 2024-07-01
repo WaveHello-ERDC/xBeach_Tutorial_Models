@@ -1,0 +1,12 @@
+  Warning: variable nx16000 > recommended value of10000
+               bedfriccoef =.0000 Warning: value < recommended value of.0100
+   Unknown, unused or multiple statements of parameterTHETAMIN inparams.txt
+   Unknown, unused or multiple statements of parameterTHETAMAX inparams.txt
+   Unknown, unused or multiple statements of parameterTHETANAUT inparams.txt
+   Unknown, unused or multiple statements of parameterDTHETA inparams.txt
+   Unknown, unused or multiple statements of parameterDTHETA_S inparams.txt
+  Quit XBeach since computational time implodes/explodes
+  Please check output at the end of the simulation
+  U-velocities are too high in cell (3468,2)(M,N)
+   dtref:  4.245215974740417E-004
+   par%dt:  6.931265294975495E-007

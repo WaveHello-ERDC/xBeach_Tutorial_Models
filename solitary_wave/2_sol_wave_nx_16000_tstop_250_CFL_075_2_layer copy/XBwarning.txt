@@ -1,0 +1,2 @@
+ Warning: Specification of nonh using parameter 'wavemodel'
+  Warning: variable nx16000 > recommended value of10000

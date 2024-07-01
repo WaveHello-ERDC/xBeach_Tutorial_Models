@@ -1,0 +1,7 @@
+  Warning: variable nx16000 > recommended value of10000
+               bedfriccoef =.0000 Warning: value < recommended value of.0100
+   Unknown, unused or multiple statements of parameterTHETAMIN inparams.txt
+   Unknown, unused or multiple statements of parameterTHETAMAX inparams.txt
+   Unknown, unused or multiple statements of parameterTHETANAUT inparams.txt
+   Unknown, unused or multiple statements of parameterDTHETA inparams.txt
+   Unknown, unused or multiple statements of parameterDTHETA_S inparams.txt

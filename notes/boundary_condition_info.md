@@ -39,3 +39,14 @@ Flow boundary condition parameters:
 8) ts_1
 9) ts_2
 10) **ts_nonh**: This is the mode that should be used with nonh models and requres the boun_U.bcf file
+
+
+Things I want to include:
+* Github repo with:
+  * XBeach input files
+  * jupyter script
+  * Fork of the xBeach toolbox
+  * Comparison of the analytical and xBeach solution
+
+Need to test and make sure it works.
+

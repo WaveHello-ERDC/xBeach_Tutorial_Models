@@ -1,0 +1,7 @@
+  Quit XBeach since computational time implodes/explodes
+  Please check output at the end of the simulation
+  U-velocities are too high in cell (3468,2)(M,N)
+   dtref:  4.245215974740417E-004
+   par%dt:  6.931265294975495E-007
+  An extra output timestep is created to inquire the last timestep
+      before an error occured

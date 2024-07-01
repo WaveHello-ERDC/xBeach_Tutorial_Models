@@ -1,0 +1,97 @@
+%% XBeach model: Test simulation 
+%% Params created on 2024-05-31 17H:05m 
+%% Params created by johnm 
+
+%% General 
+
+wavemodel           = nonh
+nonh                = 1
+flow                = 1
+
+%% Grid 
+
+vardx               = 1
+posdwn              = -1
+nx                  = 150
+ny                  = 150
+xori                = 0
+yori                = 0
+alfa                = 0.0
+xfile               = x.grd
+yfile               = y.grd
+depfile             = bed.dep
+thetamin            = -90
+thetamax            = 90
+thetanaut           = 0
+dtheta              = 10
+dtheta_s            = 10
+
+%% par 
+
+
+%% Physical processes 
+
+morphology          = 0
+
+%% Physical processes
+morphology          = 0
+
+%% Model time 
+% Change this to 0.5 later
+CFL                 = 0.5
+tstop               = 160
+
+%% Initial conditions 
+zs0                 = 0
+
+%% Wave Boundary conditions
+wbctype             = ts_nonh
+bcfile              = boun_U.bcf
+% Other option is waveCrest or cyclic
+lateralwave         = neumann
+
+%% Flow boundary conditions
+front               = nonh_1d
+left                = neumann
+right               = neumann
+back                = abs_2d
+
+%% Tide boundary conditions
+tideloc             = 0
+zs0                 = 0.0
+
+%% Flow parameters
+bedfriction         = manning
+bedfriccoef         = 0.0 
+%%% Leaving them as the default for the time being
+%%% This means that there is friction on the bottom not sure if it's possible to turn off friction entirely
+
+%% Coriolis force parameters
+%%% Leaving as default
+
+%% Non-hydrostatic correction parameters
+%%% solver = tridiag
+%%% kdmin = 
+%%% Topt
+%%% nhbreaker = 1
+%%% dispc = -1.000
+%%% breakviscfac = 1.5000
+%%% maxbrsteep = 0.4000
+%%% reformsteep = 0.1000
+
+%% Bed composition parameters
+%%% Leaving as default
+
+%%% Output variables
+
+tintm         = 0.1
+tintp         = 0.1
+tintg         = 0.1
+tstart        = 0
+outputformat = netcdf
+
+nglobalvar = 4
+zs
+zb
+u
+v

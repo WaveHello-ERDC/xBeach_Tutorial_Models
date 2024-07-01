@@ -13,7 +13,7 @@ Initial analytical solution for the model. Is used to generate the boundary cond
 
 NOTE: In wbctype = ts_nonh mode, the surface elevation input is the pertubation from the zs0 value. It is not the actual surface elevation.
 
- oscillating_wave_compare_analy_xBeach.ipynb
+ oscillating_basin_compare_analy_xBeach.ipynb
 -------------------------------------
 
 Compares the analytical solution to the xBeach model.

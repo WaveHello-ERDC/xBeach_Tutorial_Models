@@ -9,3 +9,5 @@ solution when applicable.
 
 ### Notes
 The xBeach executable isn't included in the repo. The version that was used for this analysis the XBeach_1.24.6057_Halloween_win64_netcdf. At the time of writing this it's available on the xBeach download page and is the most recent verison.
+
+When prescribing the surface elevation in the boun_U.bcf file make sure to subtract off the inital water elevation ($Input = \eta - zs0$).

@@ -160,7 +160,7 @@ def calc_L_scaling(epsilon, delta_scaling = 1/20):
 
     where:
         epsilon: Ratio of intial wave height to intial depth
-        delta_scaling: Scaling of epsilon terms used to calc delta - taken tobe 1/20 in the manual
+        delta_scaling: Scaling of epsilon terms used to calc delta - taken to ;be 1/20 in the manual
     
     xBeach Non-hydrostaic manual url: https://oss.deltares.nl/documents/4142077/4199062/non-hydrostatic_report_draft.pdf
 
@@ -171,6 +171,30 @@ def calc_L_scaling(epsilon, delta_scaling = 1/20):
     L_sol = np.sqrt(4/(3 * epsilon)) * np.arccosh(np.sqrt(epsilon/delta))
 
     return L_sol
+
+def calc_Smit_L_scaling(eta_0, d0, delta = 1/20):
+    """
+    Calc the wave length scaling parameter L_{sol} form **Smit (2008)**
+    
+    inputs:
+        - eta_0 : Amplitude of the solitary wave
+        - d0    : Still Water depth
+        - delta : Scaling factor
+
+    Eqn:
+        L = 2 \sqrt{ \frac{ 3 \eta_{0} }{4 d_{0}^{3} }} arccosh( \sqrt( 1 / \delta ) )
+    
+    where:
+        - \eta_{0} : Amplitude of the solitary wave
+        - d_{0}    : Still water depth
+        - \delta   : Scaling parameter
+
+    [Smit (2008)](https://repository.tudelft.nl/islandora/object/uuid:416ae56c-8fa6-42b1-b532-acc457b28604?collection=education)
+    
+    """
+
+    inner_fraction = 3 * eta_0 / ( 4 * d0**3 )
+    return 2 * np.sqrt(inner_fraction) * np.arccosh(np.sqrt( 1/ delta ) )
 
 def calc_u_vel(epsilon, x0, x, y, t, g, d0):
     r"""

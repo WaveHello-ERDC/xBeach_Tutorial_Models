@@ -8,7 +8,7 @@
   **********************************************************
  
   Simulation started: YYYYMMDD    hh:mm:ss     time zone (UTC)
-                      20240628  10:51:12     -0500
+                      20240711  09:32:01     -0500
  
   General Input Module
   Reading input parameters:
@@ -136,10 +136,12 @@
                      tintp =.1000
                     tsmean = None specified
                      tintm =.1000
-                nglobalvar =3
+                nglobalvar =5
    nglobalvar: Will generate global output for variable:zs
    nglobalvar: Will generate global output for variable:zb
    nglobalvar: Will generate global output for variable:H
+   nglobalvar: Will generate global output for variable:u
+   nglobalvar: Will generate global output for variable:v
                    npoints =0 (no record found, default value used)
                   nrugauge =0 (no record found, default value used)
                  npointvar =0 (no record found, default value used)
@@ -181,31 +183,37 @@
    Creating netcdf variable:zs
    Creating netcdf variable:zb
    Creating netcdf variable:H
+   Creating netcdf variable:u
+   Creating netcdf variable:v
   Writing file definition.
   Setting up boundary conditions
   Boundary conditions complete, starting computation
-  Simulation 11.1 percent complete. Average dt  0.006 seconds
+  Simulation  9.1 percent complete. Average dt  0.006 seconds
+  Time remaining 50 seconds
+  Simulation 17.9 percent complete. Average dt  0.005 seconds
+  Time remaining 46 seconds
+  Simulation 27.1 percent complete. Average dt  0.005 seconds
   Time remaining 40 seconds
-  Simulation 19.9 percent complete. Average dt  0.005 seconds
-  Time remaining 43 seconds
-  Simulation 29.0 percent complete. Average dt  0.005 seconds
-  Time remaining 38 seconds
-  Simulation 38.1 percent complete. Average dt  0.005 seconds
-  Time remaining 33 seconds
-  Simulation 47.9 percent complete. Average dt  0.005 seconds
-  Time remaining 27 seconds
-  Simulation 57.4 percent complete. Average dt  0.005 seconds
-  Time remaining 22 seconds
-  Simulation 66.6 percent complete. Average dt  0.005 seconds
-  Time remaining 18 seconds
-  Simulation 76.3 percent complete. Average dt  0.005 seconds
-  Time remaining 12 seconds
-  Simulation 86.3 percent complete. Average dt  0.005 seconds
-  Time remaining  7 seconds
-  Simulation 96.6 percent complete. Average dt  0.005 seconds
-  Time remaining  2 seconds
-   Duration   :   50.1406250000000       seconds
+  Simulation 35.9 percent complete. Average dt  0.005 seconds
+  Time remaining 36 seconds
+  Simulation 43.3 percent complete. Average dt  0.005 seconds
+  Time remaining 36 seconds
+  Simulation 51.1 percent complete. Average dt  0.005 seconds
+  Time remaining 30 seconds
+  Simulation 59.0 percent complete. Average dt  0.005 seconds
+  Time remaining 25 seconds
+  Simulation 65.8 percent complete. Average dt  0.005 seconds
+  Time remaining 23 seconds
+  Simulation 73.7 percent complete. Average dt  0.005 seconds
+  Time remaining 16 seconds
+  Simulation 82.3 percent complete. Average dt  0.005 seconds
+  Time remaining 11 seconds
+  Simulation 90.0 percent complete. Average dt  0.005 seconds
+  Time remaining  6 seconds
+  Simulation 98.0 percent complete. Average dt  0.005 seconds
+  Time remaining  1 seconds
+   Duration   :   59.7031250000000       seconds
    Timesteps  :        7557
    Average dt :  5.293105729786952E-003  seconds
-   Unit speed :  4.146610047537637E-007  seconds/1
+   Unit speed :  4.937425051929358E-007  seconds/1
   End of program xbeach

@@ -8,7 +8,7 @@
   **********************************************************
  
   Simulation started: YYYYMMDD    hh:mm:ss     time zone (UTC)
-                      20240628  17:40:32     -0500
+                      20240711  08:44:29     -0500
  
   General Input Module
   Reading input parameters:
@@ -184,16 +184,14 @@
   Writing file definition.
   Setting up boundary conditions
   Boundary conditions complete, starting computation
-  Simulation 26.7 percent complete. Average dt  0.001 seconds
-  Time remaining 14 seconds
-  Simulation 48.4 percent complete. Average dt  0.001 seconds
-  Time remaining 11 seconds
-  Simulation 77.3 percent complete. Average dt  0.001 seconds
-  Time remaining  4 seconds
-  Simulation 97.1 percent complete. Average dt  0.001 seconds
+  Simulation 30.3 percent complete. Average dt  0.001 seconds
+  Time remaining 12 seconds
+  Simulation 62.7 percent complete. Average dt  0.001 seconds
+  Time remaining  6 seconds
+  Simulation 92.2 percent complete. Average dt  0.001 seconds
   Time remaining  1 seconds
-   Duration   :   19.0781250000000       seconds
+   Duration   :   15.1093750000000       seconds
    Timesteps  :       35678
    Average dt :  5.025172234990751E-004  seconds
-   Unit speed :  5.294364222564977E-006  seconds/1
+   Unit speed :  4.192997709435163E-006  seconds/1
   End of program xbeach

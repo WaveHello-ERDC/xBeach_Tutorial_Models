@@ -8,7 +8,7 @@
   **********************************************************
  
   Simulation started: YYYYMMDD    hh:mm:ss     time zone (UTC)
-                      20240701  15:13:31     -0500
+                      20240711  11:30:14     -0500
  
   General Input Module
   Reading input parameters:
@@ -22,7 +22,7 @@
                     cyclic =0 (no record found, default value used)
                      swave =0 (no record found, default value used)
                      lwave =0
-                      flow =1 (no record found, default value used)
+                      flow =1
                   sedtrans =0 (no record found, default value used)
                 morphology =0
                avalanching =0 (no record found, default value used)
@@ -31,7 +31,7 @@
                 vegetation =0 (no record found, default value used)
                   setbathy =0 (no record found, default value used)
                  viscosity =0
-                 advection =1
+                 advection =1 (no record found, default value used)
                       wind =0 (no record found, default value used)
   --------------------------------
   Grid parameters:
@@ -39,7 +39,7 @@
                       xori =.0000
                       yori =.0000
                       alfa =.0000
-                        nx =2800
+                        nx =100
                         ny =0
                     posdwn =-1.0000
                    depfile =bed.dep
@@ -51,9 +51,9 @@
                         nz =1 (no record found, default value used)
   --------------------------------
   Model time parameters:
-                       CFL =.2000
+                       CFL =.1000
                      dtset =.0000 (no record found, default value used)
-                     tstop =107.2221
+                     tstop =17.9288
                   maxdtfac =500.0000 (no record found, default value used)
   --------------------------------
   Physical constants:
@@ -65,17 +65,17 @@
                 zsinitfile =zsinitfile.txt
   --------------------------------
   Wave boundary condition parameters:
-                   wbctype =ts_nonh
-                     taper =.0000
+                   wbctype =off
+                     taper =100.0000 (no record found, default value used)
                       nmax =.8000 (no record found, default value used)
                lateralwave =neumann (no record found, default value used)
   --------------------------------
   Flow boundary condition parameters:
-                     front =nonh_1d
-                      left =neumann
-                     right =neumann
-                      back =abs_1d
-                       ARC =1
+                     front =wall
+                      left =wall
+                     right =wall
+                      back =wall
+                       ARC =0
                      order =1.0000
                   highcomp =0 (no record found, default value used)
                   freewave =0 (no record found, default value used)
@@ -84,7 +84,7 @@
   --------------------------------
   Tide boundary conditions:
                    tideloc =0
-                       zs0 =10.0000 Warning: value > recommended value of5.0000
+                       zs0 =.0000 (no record found, default value used)
   --------------------------------
   Discharge boundary conditions:
             disch_loc_file = None specified
@@ -112,8 +112,11 @@
                      kdmin =.0000 (no record found, default value used)
                       Topt =10.0000 (no record found, default value used)
                    nonhq3d =1
-                 nhbreaker =0
+                 nhbreaker =1 (no record found, default value used)
                      nhlay =.3300
+              breakviscfac =1.5000 (no record found, default value used)
+                maxbrsteep =.4000 (no record found, default value used)
+               reformsteep =.1000 (no record found, default value used)
   --------------------------------
   Bed composition parameters:
                        ngd =1 (no record found, default value used)
@@ -143,11 +146,11 @@
                  nrugdepth =1 (no record found, default value used)
    rugdepth =.0000 (no record found, default value used)
                   nmeanvar =0 (no record found, default value used)
-              outputformat =netcdf (no record found, default value used)
+              outputformat =debug
            outputprecision =double (no record found, default value used)
                 ncfilename = None specified
   netcdf output to:xboutput.nc
-              remdryoutput =1 (no record found, default value used)
+              remdryoutput =0 (no record found, default value used)
   --------------------------------
   Output projection:
                 projection = None specified
@@ -161,10 +164,11 @@
                        eps =.0050 (no record found, default value used)
                     eps_sd =.5000 (no record found, default value used)
                       umin =.0000 (no record found, default value used)
-                  secorder =1
+                  secorder =1 (no record found, default value used)
   --------------------------------
   Finished reading input parameters
   --------------------------------
+  Warning: automatically changing front to nonh_1d with wavemodel = nonh
    Unknown, unused or multiple statements of parameterTHETAMIN inparams.txt
    Unknown, unused or multiple statements of parameterTHETAMAX inparams.txt
    Unknown, unused or multiple statements of parameterTHETANAUT inparams.txt
@@ -174,33 +178,21 @@
   Building Grid and Bathymetry
   ------------------------------------
   Initializing .....
+  Debug outputformat, writing both netcdf and fortran output
   NetCDF outputformat
    Creating netcdf variable:zs
    Creating netcdf variable:zb
    Creating netcdf variable:H
   Writing file definition.
+  Fortran outputformat
   Setting up boundary conditions
   Boundary conditions complete, starting computation
-  Simulation  8.8 percent complete. Average dt  0.004 seconds
-  Time remaining 51 seconds
-  Simulation 19.2 percent complete. Average dt  0.004 seconds
-  Time remaining 41 seconds
-  Simulation 30.5 percent complete. Average dt  0.004 seconds
-  Time remaining 32 seconds
-  Simulation 41.5 percent complete. Average dt  0.004 seconds
-  Time remaining 28 seconds
-  Simulation 51.8 percent complete. Average dt  0.004 seconds
-  Time remaining 23 seconds
-  Simulation 61.6 percent complete. Average dt  0.004 seconds
-  Time remaining 19 seconds
-  Simulation 72.3 percent complete. Average dt  0.004 seconds
-  Time remaining 13 seconds
-  Simulation 83.4 percent complete. Average dt  0.004 seconds
-  Time remaining  8 seconds
-  Simulation 94.7 percent complete. Average dt  0.004 seconds
-  Time remaining  2 seconds
-   Duration   :   40.8593750000000       seconds
-   Timesteps  :       28860
-   Average dt :  3.715250485100485E-003  seconds
-   Unit speed :  5.054547517060905E-007  seconds/1
+  Simulation 33.1 percent complete. Average dt  0.001 seconds
+  Time remaining 10 seconds
+  Simulation 67.5 percent complete. Average dt  0.001 seconds
+  Time remaining  5 seconds
+   Duration   :   13.4218750000000       seconds
+   Timesteps  :       35678
+   Average dt :  5.025172234990751E-004  seconds
+   Unit speed :  3.724700136923272E-006  seconds/1
   End of program xbeach

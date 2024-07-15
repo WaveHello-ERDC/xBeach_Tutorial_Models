@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% XBeach parameter settings input file                                    %%%
 %%%                                                                         %%%
-%%% date:     2024-07-01 15H:07m                                            %%%
+%%% date:     2024-07-15 09H:07m                                            %%%
 %%% Params created by johnm                                                 %%%
 %%% function: _write_params_metadata                                        %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,7 +10,7 @@
 
 vardx               = 1
 posdwn              = -1
-nx                  = 2800
+nx                  = 16000
 ny                  = 0
 xori                = 0
 yori                = 0
@@ -32,17 +32,12 @@ morphology          = 0
 
 %%% Model time %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-CFL                 = 0.2
-tstop               = 107.22212926749165
-
-%%% Initial conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-zsinitfile          = zsinitfile.txt
+CFL                 = 0.75
+tstop               = 40
 
 %%% Wave boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 wbctype             = ts_nonh
-taper               = 0
 
 %%% Flow boundary condition parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -55,8 +50,7 @@ right               = neumann
 
 %%% Tide boundary conditions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-tideloc             = 0
-zs0                 = 10.0
+zs0                 = 1
 
 %%% Flow parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,7 +58,6 @@ bedfriccoef         = 0.0
 
 %%% Non-hydrostatic correction parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-nhbreaker           = 0
 nonhq3d             = 1
 nhlay               = 0.33
 
@@ -76,14 +69,14 @@ tintg               = 0.1
 
 %%% par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-advection           = 1
-secorder            = 1
 nonh                = 1
 
 %%% Output variables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-nglobalvar          = 3
+nglobalvar          = 5
 zs
 zb
 H
+u
+v
 

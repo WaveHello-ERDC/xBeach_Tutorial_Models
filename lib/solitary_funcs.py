@@ -173,7 +173,7 @@ def calc_L_scaling(epsilon, delta_scaling = 1/20):
     return L_sol
 
 def calc_Smit_L_scaling(eta_0, d0, delta = 1/20):
-    """
+    r"""
     Calc the wave length scaling parameter L_{sol} form **Smit (2008)**
     
     inputs:
